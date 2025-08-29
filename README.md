@@ -1,4 +1,4 @@
-# LAB03-DOSW-LopezNestor-PatinoDaniel
+# 🧩 LAB03-DOSW-LopezNestor-PatinoDaniel
 # 📘 Laboratorio - CVDS DOSW 01  
 
 ## 👥 Integrantes  
@@ -8,9 +8,13 @@
 ---
 
 ## 🏷️ Grupo  
-**01**  
+**DOSW-01**  
 
 ---
 
 ## 📂 Evidencias  
+
+**Primera entrega: Maven compilando correctamente con la configuracion solicitada**
+- **Imagen:**  
+  ![Caso de prueba](docs/images/capturaInicial.png)
 
