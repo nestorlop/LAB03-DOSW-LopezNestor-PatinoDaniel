@@ -36,6 +36,7 @@ La principal diferencia que podemos encontrar es que la Epica se encarga de agru
 -Un ejemplo de un feature en Netflix es permitir que dos usuarios puedan disfrutar del contenido al mismo tiempo. Esto es una funcion mas especifica
 -Un ejemplo de una historia de usuario en Netflix: Un usuario quiere que dos personas puedan ver la misma serie en simultaneo para poder ver una serie con su pareja de manera remota
 como programador de Netflix quiero que sea posible ver una serie en simultaneo desde diferentes dispositivos para poder satisfacer las necesidades de muchos clientes.
+
 **¿Qué es una cobertura de Código (code coverage) y porque una cobertura del 100% no garantiza necesariamente que el software esté libre de errores?**
 
 La cobertura de codigo tiene como objetivo verificar que las pruebas que se realicen cubran la mayoria de las funcionalidades del codigo aunque este no garantiza que este libre de errores ya que no mira errores logicos o si tenemos un caso borde que no tengamos contemplado. Algunas pruebas pueden pasar incluso si el resultado es erróneo si las validaciones son insuficientes o incorrectas.
