@@ -35,7 +35,8 @@
 
   •	Escriban los actores principales.
     - Cliente.
-    - Banco.
+    - Banco  Davivienda
+    -Bancolombia
 
 
   •	Documenten las precondiciones necesarias para el sistema.
