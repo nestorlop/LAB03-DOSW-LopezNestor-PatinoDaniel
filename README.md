@@ -43,3 +43,17 @@
     - La cuenta debe tener exactamente 10 digitos
     - Los dos primeros digitos de la cuenta deben corresponder a un banco registrado
     - El numero de cuenta no debe tener letras ni caracteres especiales.  
+ 
+ 
+  ## 📂 Reto 2
+    Para el reto 2 vamos a tener que realizar la diagramacion basandonos en el reto 1.
+
+    -Primero vamos a tener que crear el diagrama de contexto, este diagrama va a resumir nuestro punto 1 de una manera general.
+
+    ![alt text](image.png)
+
+
+    Y teniamos dos opciones al momento de crearlo, la primera era  dejar la entidad bancaria separada, dicho de otro modo separarlo en los dos bancos pero al final nos dimos cuenta que si lo dejabamos como una sola entidad bancaria puede quedar mejor para en un futuro realizar una posible expansion hacia otros bancos.
+    -Luego tenemos que hacer el diagrama de casos de uso. En este tambien se nos presento un problema ya que no sabiamos si poner a los bancos como agentes, al final decidimos que no y solo dejamos a los clientes. Planteando sus respectivas necesidades.
+    ![alt text](image.png)
+    
