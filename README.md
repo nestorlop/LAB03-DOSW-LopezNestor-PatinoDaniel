@@ -68,14 +68,14 @@ Después, realizamos el **diagrama de casos de uso**. Aquí tuvimos un problema:
 no sabíamos si incluir a los **bancos** como agentes o no.  
 Al final, decidimos **no incluirlos** y dejar únicamente a los **clientes**, planteando sus respectivas necesidades.
 
-![Diagrama de Casos de Uso](docs/uml/Casos%20de%20uso.png)
+![Diagrama de Casos de Uso](docs/Uml/Casos%20de%20uso.png)
 
 ---
 
 ### 🟢 3. Descripción de Casos de Uso
-Además, debíamos crear un **Excel** donde describimos cada caso de uso, detallando su **tipo** y su función dentro del sistema.
+Además, debíamos crear un **Excel** donde describimos cada caso de uso, detallando su **tipo**.
 
-![Descripción de Casos de Uso](docs/uml/EXCEL.png)
+![Descripción de Casos de Uso](docs/Uml/EXCEL.png)
 
 ---
 
@@ -83,4 +83,4 @@ Además, debíamos crear un **Excel** donde describimos cada caso de uso, detall
 Finalmente, elaboramos el **diagrama de clases**, donde mostramos cómo creemos que será la estructura más adecuada para implementar la solución de **Bankify**.  
 Aquí plasmamos cómo imaginamos que se organizará el código para que sea **más claro, simple y eficiente**.
 
-![Diagrama de Clases](docs/uml/Diagrama%20de%20clases%20(2).png)
+![Diagrama de Clases](docs/Uml/Diagrama%20de%20clases%20(2).png)
