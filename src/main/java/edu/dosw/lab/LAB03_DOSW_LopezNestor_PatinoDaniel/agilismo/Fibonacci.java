@@ -1,4 +1,4 @@
-package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.Simulacion;
+package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.agilismo;
 
 
 import java.util.Arrays;

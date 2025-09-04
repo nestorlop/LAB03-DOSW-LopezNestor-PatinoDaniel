@@ -1,4 +1,4 @@
-package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.Simulacion;
+package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.agilismo;
 
 public class Tareas {
     private final String nombreTarea;
