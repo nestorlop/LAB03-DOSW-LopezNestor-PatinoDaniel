@@ -50,10 +50,9 @@
 
     -Primero vamos a tener que crear el diagrama de contexto, este diagrama va a resumir nuestro punto 1 de una manera general.
 
-    ![alt text](image.png)
+    ![alt text](docs/uml/Diagrama de contexto.png)
 
 
     Y teniamos dos opciones al momento de crearlo, la primera era  dejar la entidad bancaria separada, dicho de otro modo separarlo en los dos bancos pero al final nos dimos cuenta que si lo dejabamos como una sola entidad bancaria puede quedar mejor para en un futuro realizar una posible expansion hacia otros bancos.
     -Luego tenemos que hacer el diagrama de casos de uso. En este tambien se nos presento un problema ya que no sabiamos si poner a los bancos como agentes, al final decidimos que no y solo dejamos a los clientes. Planteando sus respectivas necesidades.
-    ![alt text](image.png)
-    
+    ![alt text](docs/uml/Casos de uso.png)
