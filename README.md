@@ -44,15 +44,43 @@
     - Los dos primeros digitos de la cuenta deben corresponder a un banco registrado
     - El numero de cuenta no debe tener letras ni caracteres especiales.  
  
- 
-  ## 📂 Reto 2
-    Para el reto 2 vamos a tener que realizar la diagramacion basandonos en el reto 1.
+ ## 📂 Reto 2
 
-    -Primero vamos a tener que crear el diagrama de contexto, este diagrama va a resumir nuestro punto 1 de una manera general.
+Para el reto 2 tuvimos que realizar la **diagramación** basándonos en el **Reto 1**.
 
-    ![alt text](docs/uml/Diagrama de contexto.png)
+---
 
+### 🟢 1. Diagrama de Contexto
+Primero, creamos el **diagrama de contexto**, el cual resume el punto 1 de forma general y muestra cómo interactúan las entidades principales.
 
-    Y teniamos dos opciones al momento de crearlo, la primera era  dejar la entidad bancaria separada, dicho de otro modo separarlo en los dos bancos pero al final nos dimos cuenta que si lo dejabamos como una sola entidad bancaria puede quedar mejor para en un futuro realizar una posible expansion hacia otros bancos.
-    -Luego tenemos que hacer el diagrama de casos de uso. En este tambien se nos presento un problema ya que no sabiamos si poner a los bancos como agentes, al final decidimos que no y solo dejamos a los clientes. Planteando sus respectivas necesidades.
-    ![alt text](docs/uml/Casos de uso.png)
+![Diagrama de Contexto](docs/uml/Diagramadecontexto.png)
+
+Al momento de crearlo, teníamos **dos opciones**:
+- Separar cada banco como entidades independientes.
+- Mantenerlos como **una sola entidad bancaria**.
+
+Finalmente, decidimos dejarlos como **una sola entidad**, ya que así será más sencillo, en un futuro, permitir la **expansión hacia otros bancos**.
+
+---
+
+### 🟢 2. Diagrama de Casos de Uso
+Después, realizamos el **diagrama de casos de uso**. Aquí tuvimos un problema:  
+no sabíamos si incluir a los **bancos** como agentes o no.  
+Al final, decidimos **no incluirlos** y dejar únicamente a los **clientes**, planteando sus respectivas necesidades.
+
+![Diagrama de Casos de Uso](docs/uml/Casos%20de%20uso.png)
+
+---
+
+### 🟢 3. Descripción de Casos de Uso
+Además, debíamos crear un **Excel** donde describimos cada caso de uso, detallando su **tipo** y su función dentro del sistema.
+
+![Descripción de Casos de Uso](docs/uml/EXCEL.png)
+
+---
+
+### 🟢 4. Diagrama de Clases
+Finalmente, elaboramos el **diagrama de clases**, donde mostramos cómo creemos que será la estructura más adecuada para implementar la solución de **Bankify**.  
+Aquí plasmamos cómo imaginamos que se organizará el código para que sea **más claro, simple y eficiente**.
+
+![Diagrama de Clases](docs/uml/Diagrama%20de%20clases%20(2).png)
