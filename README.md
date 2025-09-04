@@ -53,7 +53,7 @@ Para el reto 2 tuvimos que realizar la **diagramación** basándonos en el **Ret
 ### 🟢 1. Diagrama de Contexto
 Primero, creamos el **diagrama de contexto**, el cual resume el punto 1 de forma general y muestra cómo interactúan las entidades principales.
 
-![Diagrama de Contexto](docs/uml/Diagramadecontexto.png)
+![Diagrama de Contexto](docs/Uml/Diagramadecontexto.png)
 
 Al momento de crearlo, teníamos **dos opciones**:
 - Separar cada banco como entidades independientes.
