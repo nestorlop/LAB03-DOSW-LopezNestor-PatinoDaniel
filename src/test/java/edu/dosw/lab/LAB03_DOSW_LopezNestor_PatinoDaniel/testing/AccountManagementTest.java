@@ -1,6 +1,9 @@
 package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -21,13 +24,13 @@ public class AccountManagementTest {
     public void setUp(){
         testAccount = new Account("01000000001", 0.0);
         invalidAccount = new Account("01000000010", 0.1);
-        accountManagement = new AccountManagement();
+        accountManagement = new AccountManagement(new ArrayList<Account>());
     }
 
 
     @Test
-    public void createAccountShouldCreate(){
-        Account newAccount = accountManagement.createAccount();
+    public void createAccountShouldCreate() throws BankifyException{
+        Account newAccount = accountManagement.createAccount("0100000002");
 
         assertEquals("0100000002", newAccount.getAccountId());
         assertEquals(0, newAccount.getBalance());
@@ -35,13 +38,13 @@ public class AccountManagementTest {
     }
 
     @Test
-    public void createAccountShouldThrowException(){
-        assertThrows(BankifyException.class, () -> accountManagement.createAccount());    
+    public void createAccountShouldThrowException() throws BankifyException{
+        assertThrows(BankifyException.class, () -> accountManagement.createAccount("0100000002"));    
     }
 
     @Test
-    public void deleteAccountShouldDelete(){
-        Account account = accountManagement.createAccount();
+    public void deleteAccountShouldDelete() throws BankifyException{
+        Account account = accountManagement.createAccount("0200000004");
         accountManagement.deleteAccount(account);
         assertThrows(BankifyException.class, () -> accountManagement.getAccount(account.getAccountId()));
     }
@@ -53,5 +56,5 @@ public class AccountManagementTest {
 
         assertEquals("The account doesn't exist", ex.getMessage());
     }
-        
+
 }

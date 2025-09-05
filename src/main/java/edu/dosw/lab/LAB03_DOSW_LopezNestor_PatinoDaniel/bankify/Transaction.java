@@ -14,6 +14,10 @@ public class Transaction {
     }
 
     public void makeDeposit(Account account, double amount){
+        accounts.stream()
+                .filter(acc -> acc.getAccountId().equals(account.getAccountId()))
+                .findFirst()
+                .ifPresent(acc -> acc.setBalance(acc.getBalance() + amount));
 
     }
 

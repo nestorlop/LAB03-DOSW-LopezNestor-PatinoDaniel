@@ -2,6 +2,8 @@ package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify;
 
 import java.util.ArrayList;
 
+import javax.swing.plaf.basic.BasicSplitPaneUI;
+
 public class Account {
 
     private String accountId;
@@ -16,7 +18,6 @@ public class Account {
         this.balance = balance;
         this.movements = new ArrayList<>();
         accountValidator = new AccountValidator();
-        accountManagment = new AccountManagement();
     } 
 
     public String getAccountId(){
@@ -29,6 +30,11 @@ public class Account {
 
     public ArrayList<Movement> getMovements(){
         return movements;
+    }
+
+    public double setBalance(double newBalance){
+        return this.balance = newBalance;
+    
     }
     
 }
