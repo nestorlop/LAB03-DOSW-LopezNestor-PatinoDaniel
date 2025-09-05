@@ -35,9 +35,8 @@
 
   •	Escriban los actores principales.
     - Cliente.
-    - Banco  Davivienda
-    -Bancolombia
-
+    - Banco.
+    - Administrador.
 
   •	Documenten las precondiciones necesarias para el sistema.
     - La cuenta debe tener exactamente 10 digitos
