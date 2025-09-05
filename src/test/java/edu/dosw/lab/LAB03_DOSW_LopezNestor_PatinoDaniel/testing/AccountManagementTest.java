@@ -1,7 +1,5 @@
 package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.testing;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -52,8 +50,7 @@ public class AccountManagementTest {
 
     @Test
     public void deleteAccountShouldThrowException(){
-        BankifyException ex = assertThrows(BankifyException.class, () -> accountManagement.deleteAccount(invalidAccount.getAccountId()));
-
+        BankifyException ex = assertThrows( BankifyException.class,() -> accountManagement.deleteAccount(invalidAccount));
         assertEquals("The account doesn't exist", ex.getMessage());
     }
 
