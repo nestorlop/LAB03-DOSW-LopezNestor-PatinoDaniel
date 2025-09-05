@@ -1,14 +1,12 @@
 package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.testing;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.Account;
-import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.AccountManagement;
 import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.AccountValidator;
 import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.BankifyException;
 
@@ -21,7 +19,7 @@ public class AccountValidatorTest {
 
     @BeforeEach
     public void setUp(){
-        testAccount = new Account("01000000001", 0.0);
+        testAccount = new Account("0100000001", 0.0);
         invalidAccount = new Account("3810102951", 10.5);
         exceptionAccount = new Account("9487218937219387129387389", -1000.0);
         accountValidator = new AccountValidator();
@@ -37,7 +35,7 @@ public class AccountValidatorTest {
     @Test
     public void shouldNotValidateAccount(){
         boolean validate  = accountValidator.validateAccount(invalidAccount.getAccountId());
-        assertTrue(validate);
+        assertFalse(validate);
     }
 
     @Test

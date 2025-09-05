@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.Account;
 import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.AccountManagement;
 import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.BankifyException;
-import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.AccountManagement;
 
 public class AccountManagementTest {
 
@@ -46,13 +45,12 @@ public class AccountManagementTest {
     public void deleteAccountShouldDelete() throws BankifyException{
         Account account = accountManagement.createAccount("0200000004");
         accountManagement.deleteAccount(account);
-        assertThrows(BankifyException.class, () -> accountManagement.getAccount(account.getAccountId()));
+        assertThrows(BankifyException.class, () -> account.getAccountId());
     }
-
 
     @Test
     public void deleteAccountShouldThrowException(){
-        BankifyException ex = assertThrows(BankifyException.class, () -> accountManagement.deleteAccount(invalidAccount.getAccountId()));
+        BankifyException ex = assertThrows(BankifyException.class, () -> accountManagement.deleteAccount(invalidAccount));
 
         assertEquals("The account doesn't exist", ex.getMessage());
     }

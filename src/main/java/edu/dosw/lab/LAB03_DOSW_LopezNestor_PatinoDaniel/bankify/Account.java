@@ -2,8 +2,6 @@ package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify;
 
 import java.util.ArrayList;
 
-import javax.swing.plaf.basic.BasicSplitPaneUI;
-
 public class Account {
 
     private String accountId;
