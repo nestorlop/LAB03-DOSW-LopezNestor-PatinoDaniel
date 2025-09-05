@@ -6,7 +6,7 @@ public class AccountManagement {
         return null;
     }
     
-    public void deleteAccount(){
+    public void deleteAccount(Account account){
         
     }
     

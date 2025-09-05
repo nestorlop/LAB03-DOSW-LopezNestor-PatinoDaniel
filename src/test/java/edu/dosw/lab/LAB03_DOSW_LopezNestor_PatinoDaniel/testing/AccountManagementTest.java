@@ -1,7 +1,7 @@
 package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,10 +15,12 @@ public class AccountManagementTest {
 
     private AccountManagement accountManagement;
     private Account testAccount;
+    private Account invalidAccount;
 
     @BeforeEach
     public void setUp(){
         testAccount = new Account("01000000001", 0.0);
+        invalidAccount = new Account("01000000010", 0.1);
         accountManagement = new AccountManagement();
     }
 
@@ -27,31 +29,29 @@ public class AccountManagementTest {
     public void createAccountShouldCreate(){
         Account newAccount = accountManagement.createAccount();
 
-        assertEquals(0100000002, newAccount.getAccountId());
+        assertEquals("0100000002", newAccount.getAccountId());
         assertEquals(0, newAccount.getBalance());
 
     }
 
     @Test
     public void createAccountShouldThrowException(){
-        Account newAccount = accountManagement.createAccount();
-
-        assertThrows(BankifyException.class, () -> {newAccount();});
+        assertThrows(BankifyException.class, () -> accountManagement.createAccount());    
     }
 
     @Test
     public void deleteAccountShouldDelete(){
-        accountManagement.deleteAccount();
-        assertEquals(null, testAccount.getAccountId());
+        Account account = accountManagement.createAccount();
+        accountManagement.deleteAccount(account);
+        assertThrows(BankifyException.class, () -> accountManagement.getAccount(account.getAccountId()));
     }
+
 
     @Test
     public void deleteAccountShouldThrowException(){
-        accountManagement.deleteAccount();
+        BankifyException ex = assertThrows(BankifyException.class, () -> accountManagement.deleteAccount(invalidAccount.getAccountId()));
 
-        String message = assertThrows(BankifyException.class, () -> {accountManagement.deleteAccount()});
-        assertEquals("The account doesn't exist", message);
-
+        assertEquals("The account doesn't exist", ex.getMessage());
     }
-    
+        
 }

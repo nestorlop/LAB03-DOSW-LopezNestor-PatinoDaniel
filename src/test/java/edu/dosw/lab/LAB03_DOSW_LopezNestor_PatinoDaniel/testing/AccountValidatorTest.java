@@ -42,8 +42,7 @@ public class AccountValidatorTest {
 
     @Test
     public void createAccountShouldThrowException(){
-        assertThrows(BankifyException.class, () -> {accountValidator.validateAccount(invalidAccount.getAccountId());
-});
+        assertThrows(BankifyException.class, () -> accountValidator.validateAccount(invalidAccount.getAccountId()));
 
     }
 }
