@@ -107,3 +107,10 @@ Para organizar el proyecto, definimos las siguientes clases:
 
 ### **🎯 Resultado de la Aplicación**
 ![Resultado de la Aplicación](docs/images/Reto3.png)
+##Reto 4
+
+
+## Reto 5
+En un primer momento agregamos lo necesario al pom y verificamos que nos funcionara. Tras esto probamos cuando cubria nuestras pruebas, ahi logramos evidenciar que eran pobres ya que solo cubrian el 17% del codigo. Esto nos preocupo bastante y nos dio a entender que nuestras pruebas eran muy precarias por lo que tuvimos que agregar mas. Asi logramos que estas cubrieran el 81% de nuestro codigo mostrando que es un codigo optimo y que las pruebas lo cubren casi en su totalidad
+Cobertura inicial.
+![alt text](docs/images/image.png)
