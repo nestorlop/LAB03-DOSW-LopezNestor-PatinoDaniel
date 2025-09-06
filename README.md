@@ -122,3 +122,10 @@ En un primer momento agregamos lo necesario al pom y verificamos que nos funcion
 ## Cobertura Mejorada
 
 ![alt text](docs/images/image2.png)
+Para mejorar nuestra conertura fue necesario mejor casi todas nuestras pruebas en general, consideramos que es importante que nuestro codigo tenga casi toda la cobertura del codigo para verificar que tenemos un codigo funcional y que se cumple con los objetivos principales de nuestro programa y nos ayuda a verificar que nuestro codigo no tenga errores inseperados, en nuestro caso encontramos algunos errores y tuvimos que arreglarlo.
+
+## Reto 6
+
+Analisis estatico del codigo:
+
+![alt text](docs/images/image3.png)
