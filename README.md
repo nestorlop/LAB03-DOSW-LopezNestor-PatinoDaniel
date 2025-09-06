@@ -107,3 +107,25 @@ Para organizar el proyecto, definimos las siguientes clases:
 
 ### **🎯 Resultado de la Aplicación**
 ![Resultado de la Aplicación](docs/images/Reto3.png)
+##Reto 4
+
+
+## Reto 5
+## Contexto
+
+En un primer momento agregamos lo necesario al pom y verificamos que nos funcionara. Tras esto probamos cuando cubria nuestras pruebas, ahi logramos evidenciar que eran pobres ya que solo cubrian el 17% del codigo. Esto nos preocupo bastante y nos dio a entender que nuestras pruebas eran muy precarias por lo que tuvimos que agregar mas. Asi logramos que estas cubrieran el 80% de nuestro codigo mostrando que es un codigo optimo y que las pruebas lo cubren casi en su totalidad.
+
+## Cobertura Inicial
+
+![alt text](docs/images/image.png)
+
+## Cobertura Mejorada
+
+![alt text](docs/images/image2.png)
+Para mejorar nuestra conertura fue necesario mejor casi todas nuestras pruebas en general, consideramos que es importante que nuestro codigo tenga casi toda la cobertura del codigo para verificar que tenemos un codigo funcional y que se cumple con los objetivos principales de nuestro programa y nos ayuda a verificar que nuestro codigo no tenga errores inseperados, en nuestro caso encontramos algunos errores y tuvimos que arreglarlo.
+
+## Reto 6
+
+Analisis estatico del codigo:
+
+![alt text](docs/images/image3.png)

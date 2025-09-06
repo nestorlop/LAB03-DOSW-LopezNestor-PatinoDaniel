@@ -1,57 +1,76 @@
 package edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.testing;
 
+import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.Account;
+import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.AccountManagement;
+import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.BankifyException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.Account;
-import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.AccountManagement;
-import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.BankifyException;
-import edu.dosw.lab.LAB03_DOSW_LopezNestor_PatinoDaniel.bankify.AccountManagement;
-
 public class AccountManagementTest {
 
     private AccountManagement accountManagement;
-    private Account testAccount;
-    private Account invalidAccount;
 
     @BeforeEach
-    public void setUp(){
-        testAccount = new Account("01000000001", 0.0);
-        invalidAccount = new Account("01000000010", 0.1);
-        accountManagement = new AccountManagement(new ArrayList<Account>());
-    }
-
-
-    @Test
-    public void createAccountShouldCreate() throws BankifyException{
-        Account newAccount = accountManagement.createAccount("0100000002");
-
-        assertEquals("0100000002", newAccount.getAccountId());
-        assertEquals(0, newAccount.getBalance());
-
+    public void setUp() {
+        accountManagement = new AccountManagement(new ArrayList<>());
     }
 
     @Test
-    public void createAccountShouldThrowException() throws BankifyException{
-        assertThrows(BankifyException.class, () -> accountManagement.createAccount("0100000002"));    
+    public void shouldCreateAccountSuccessfully() throws BankifyException {
+        Account account = accountManagement.createAccount("0100000001");
+        assertNotNull(account);
+        assertEquals("0100000001", account.getAccountId());
+        assertEquals(0.0, account.getBalance());
     }
 
     @Test
-    public void deleteAccountShouldDelete() throws BankifyException{
-        Account account = accountManagement.createAccount("0200000004");
+    public void shouldThrowExceptionWhenAccountIdInvalid() {
+        BankifyException exception = assertThrows(
+                BankifyException.class,
+                () -> accountManagement.createAccount("9900000001")
+        );
+        assertEquals(BankifyException.INVALID_ACCOUNT_ID, exception.getMessage());
+    }
+
+    @Test
+    public void shouldDeleteExistingAccount() throws BankifyException {
+        Account account = accountManagement.createAccount("0200000002");
         accountManagement.deleteAccount(account);
-        assertThrows(BankifyException.class, () -> accountManagement.createAccount(account.getAccountId()));
-    }
 
+        BankifyException exception = assertThrows(
+                BankifyException.class,
+                () -> accountManagement.deleteAccount(account)
+        );
+        assertEquals(BankifyException.ACCOUNT_NOT_FOUND, exception.getMessage());
+    }
 
     @Test
-    public void deleteAccountShouldThrowException(){
-        BankifyException ex = assertThrows( BankifyException.class,() -> accountManagement.deleteAccount(invalidAccount));
-        assertEquals("The account doesn't exist", ex.getMessage());
+    public void shouldThrowExceptionWhenDeletingNullAccount() {
+        BankifyException exception = assertThrows(
+                BankifyException.class,
+                () -> accountManagement.deleteAccount(null)
+        );
+        assertEquals(BankifyException.ACCOUNT_NOT_FOUND, exception.getMessage());
     }
 
+    @Test
+    public void shouldCreateMultipleAccounts() throws BankifyException {
+        Account account1 = accountManagement.createAccount("0100000003");
+        Account account2 = accountManagement.createAccount("0200000004");
+
+        assertNotEquals(account1.getAccountId(), account2.getAccountId());
+        assertEquals(0.0, account1.getBalance());
+        assertEquals(0.0, account2.getBalance());
+    }
+
+    @Test
+    public void shouldSetBalanceCorrectly() throws BankifyException {
+        Account account = accountManagement.createAccount("0100000005");
+        account.setBalance(500.0);
+        assertEquals(500.0, account.getBalance());
+    }
 }
